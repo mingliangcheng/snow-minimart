@@ -1,0 +1,29 @@
+module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    es2021: true,
+    node: true
+  },
+  extends: [
+    'plugin:vue/vue3-recommended',
+    'eslint:recommended',
+    '@vue/typescript/recommended',
+    '@vue/prettier',
+    '@vue/prettier/@typescript-eslint',
+    // eslint-config-prettier 的缩写
+    'prettier'
+  ],
+  parserOptions: {
+    ecmaVersion: 2021
+  },
+  plugins: [],
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'vue/multi-word-component-names': 0, // 关闭驼峰命名规则
+    '@typescript-eslint/no-explicit-any': 'off', // any
+    'no-else-return': 2, //如果if语句里面有return,后面不能跟else语句
+    eqeqeq: 2 //必须使用全等
+  }
+}
