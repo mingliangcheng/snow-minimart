@@ -1,16 +1,16 @@
 <template>
   <view class="content">
-    <image class="logo" :src="logo" />
     <view class="text-area">
       <text class="title">
         {{ title }}
       </text>
     </view>
+    <van-button type="primary">提交</van-button>
+    <van-icon name="chat-o" />
   </view>
 </template>
 
 <script setup lang="ts">
-import logo from '@/static/logo.png'
 const title = ref('hello')
 </script>
 
